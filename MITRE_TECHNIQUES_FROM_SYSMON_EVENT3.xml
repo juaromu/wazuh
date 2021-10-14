@@ -430,27 +430,4 @@
 <group>sysmon_event3,</group>
 </rule>
 <!-- Rules 102500 - 102999: Exceptions/Rule Level Mod -->
-<!-- Exclude AlienVault OTX IPs - Rule Level = 1 -->
-<rule id="102500" level="1">
-<if_sid>102117</if_sid>
-<field name="win.eventdata.destinationIP">^13\.226\.107|^99\.86\.142|^13\.225\.0|^52\.84\.228|139\.180\.134\.102</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1059</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Exclude Agent Public IP - Rule Level = 1 -->
-<rule id="102501" level="1">
-<if_sid>102101</if_sid>
-<field name="win.eventdata.destinationIP">^139\.180\.134\.102$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1021</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-
 </group>
