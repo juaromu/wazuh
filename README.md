@@ -274,7 +274,7 @@ Edit agent configuration in Wazuh manager (shared/groups)
 ```
  <wodle name="command">
   <disabled>no</disabled>
-  <tag>autoruns</tag>
+  <tag>logonsessions</tag>
   <command>Powershell.exe -executionpolicy bypass -File "C:\Program Files\Sysinternals\logonsessions.ps1"</command>
   <interval>1h</interval>
   <ignore_output>yes</ignore_output>
@@ -421,7 +421,7 @@ Edit agent configuration in Wazuh manager (shared/groups)
 ```
  <wodle name="command">
   <disabled>no</disabled>
-  <tag>autoruns</tag>
+  <tag>sigcheck</tag>
   <command>Powershell.exe -executionpolicy bypass -File "C:\Program Files\Sysinternals\sigcheck.ps1"</command>
   <interval>1d</interval>
   <ignore_output>yes</ignore_output>
